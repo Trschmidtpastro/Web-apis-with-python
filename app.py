@@ -8,7 +8,7 @@ app = Flask(__name__)
 def index():
     """
     TODO:
-    1. Thiago Rogerio Schmidt Pastro
+    1. Capture first name & last name
     2. If either is not provided: respond with an error
     3. If first name is not provided and second name is provided: respond with "Hello Mr <second-name>!"
     4. If first name is provided byt second name is not provided: respond with "Hello, <first-name>!"
