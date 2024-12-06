@@ -4,6 +4,11 @@ app = Flask(__name__)
 # Define what the app does
 @app.route("/greeting")
 def index():
-    response = {"data":"Hello World !!!"}
+    
+    name = request.args.get("name")
+    if not name:
+        return jsonify({status}:{error})
+    
+    response = {"data":f"Hello {name}!"}
     return jsonify(response)
 
