@@ -11,10 +11,8 @@ def index():
         return jsonify({"status": "error"})
     elif fname and not lname: 
         response = {"data":f"Hello, {fname}!"}
-    response = {"data":f"Hello {name}!"}
     elif lname and not fname: 
         response = {"data":f"Hello, {lname}!"}
-    response = {"data":f"Hello {name}!"}
     else:
     response = {"data":f"Is your name, {fname} {lname}?"}
     return jsonify(response)
