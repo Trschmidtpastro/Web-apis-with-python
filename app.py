@@ -5,10 +5,17 @@ app = Flask(__name__)
 @app.route("/greeting")
 def index():
     
-    name = request.args.get("name")
-    if not name:
-        return jsonify({"status"}:{"error"})
-    
+    fname = request.args.get("fname")
+    lname = request.args.get("lname")
+    if not fname and not lname:
+        return jsonify({"status": "error"})
+    elif fname and not lname: 
+        response = {"data":f"Hello, {fname}!"}
     response = {"data":f"Hello {name}!"}
+    elif lname and not fname: 
+        response = {"data":f"Hello, {lname}!"}
+    response = {"data":f"Hello {name}!"}
+    else:
+    response = {"data":f"Is your name, {fname} {lname}?"}
     return jsonify(response)
 
