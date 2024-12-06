@@ -7,7 +7,7 @@ def index():
     
     name = request.args.get("name")
     if not name:
-        return jsonify({status}:{error})
+        return jsonify({"status"}:{"error"})
     
     response = {"data":f"Hello {name}!"}
     return jsonify(response)
